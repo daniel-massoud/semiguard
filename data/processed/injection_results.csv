@@ -1,10 +1,10 @@
 anomaly_type,detector,auroc,n_corrupted
-stuck_sensor,mahalanobis,0.4704697986577181,15
-stuck_sensor,isolation_forest,0.4395973154362416,15
-stuck_sensor,lof,0.46778523489932883,15
-stuck_sensor,ocsvm,0.4740492170022371,15
-stuck_sensor,autoencoder,0.4736017897091723,15
-stuck_sensor,tree_disagreement,0.4691275167785235,15
+stuck_sensor,mahalanobis,0.480089485458613,15
+stuck_sensor,isolation_forest,0.4671140939597316,15
+stuck_sensor,lof,0.47046979865771815,15
+stuck_sensor,ocsvm,0.4756152125279641,15
+stuck_sensor,autoencoder,0.47449664429530203,15
+stuck_sensor,tree_disagreement,0.4668903803131991,15
 sensor_spike,mahalanobis,0.8572706935123042,15
 sensor_spike,isolation_forest,0.6123042505592842,15
 sensor_spike,lof,0.7357941834451902,15

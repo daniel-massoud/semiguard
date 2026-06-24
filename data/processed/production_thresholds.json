@@ -1,0 +1,44 @@
+{
+  "recommended_review_budget": 0.1,
+  "strategies": {
+    "baseline_only": {
+      "threshold": 0.1850145502645502,
+      "expected_precision": 0.03225806451612903,
+      "expected_recall": 0.09090909090909091,
+      "precision_ci_95": [
+        0.0,
+        0.0967741935483871
+      ],
+      "recall_ci_95": [
+        0.0,
+        0.30403846153846137
+      ]
+    },
+    "anomaly_only": {
+      "threshold": 272.8,
+      "expected_precision": 0.0967741935483871,
+      "expected_recall": 0.2727272727272727,
+      "precision_ci_95": [
+        0.0,
+        0.1935483870967742
+      ],
+      "recall_ci_95": [
+        0.0,
+        0.5
+      ]
+    },
+    "baseline_and_anomaly": {
+      "threshold": 241.75,
+      "expected_precision": 0.12903225806451613,
+      "expected_recall": 0.36363636363636365,
+      "precision_ci_95": [
+        0.03225806451612903,
+        0.25806451612903225
+      ],
+      "recall_ci_95": [
+        0.07996794871794873,
+        0.6666666666666666
+      ]
+    }
+  }
+}

@@ -34,8 +34,12 @@ def stuck_sensor(df, sensor_cols, fraction=0.05, n_sensors_stuck=3, seed=0):
     stuck_sensors = rng.choice(sensor_cols, n_sensors_stuck, replace=False)
     for sensor in stuck_sensors:
         # Standardized features have median ~0, so "stuck" means stuck at 0.
-        out.loc[out.index[corrupt_idx], sensor] = 0.0
-    return out, mask, {"sensors_affected": list(stuck_sensors)}
+        # Freeze at a non-median value — a real stuck sensor doesn't
+        # conveniently land on the training mean. Use the sensor's 90th
+        # percentile so the frozen value is unusual but plausible.
+        stuck_value = float(np.quantile(df[sensor].values, 0.90))
+        out.loc[out.index[corrupt_idx], sensor] = stuck_value 
+        return out, mask, {"sensors_affected": list(stuck_sensors)}
 
 
 def sensor_spike(df, sensor_cols, fraction=0.05, spike_magnitude=8.0, seed=1):
